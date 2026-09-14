@@ -44,6 +44,10 @@ src/
 └── main.tsx
 ```
 
+## 選擇題目
+
+Mocking momoshop
+
 ## 首頁未完成事項
 
 - 輪播與大型活動廣告
