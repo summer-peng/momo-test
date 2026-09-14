@@ -6,13 +6,16 @@ Project Goal
 
 在本次開發重點將放在 首頁（Home） 與 商品查詢頁（Search），用來驗證整體 Layout、Routing、商品資料模型、共用元件與資料取得流程；其餘功能則先建立 Page Shell 與 Routing Boundary，保留後續擴充空間。
 
-這項取捨的目的，是優先建立可維護、可演進的系統骨架與核心商品瀏覽流程，而不是在有限時間內追求功能數量或完整重現正式電商網站。
-
-## Functional Architecture
+## Project Structure
 
 ```text
 src/
 ├── assets/
+│
+├── components/
+│   ├── Carousel/
+│   ├── MainLayout/
+│   └── TwoColumnLayout/
 │
 ├── pages/
 │   ├── edm/
@@ -20,6 +23,14 @@ src/
 │   │       └── index.tsx
 │   │
 │   ├── Home/
+│   │   ├── components/
+│   │   │   ├── CampaignBanner/
+│   │   │   ├── HeroCarousel/
+│   │   │   │   ├── index.tsx
+│   │   │   │   └── styles.module.scss
+│   │   │   ├── ProductCarousel/
+│   │   │   └── PromoGrid/
+│   │   │
 │   │   ├── index.tsx
 │   │   └── styles.module.scss
 │   │
@@ -29,5 +40,52 @@ src/
 │       └── ProductSearch/
 │
 ├── App.tsx
+├── main.css
 └── main.tsx
 ```
+
+## 首頁未完成事項
+
+- 輪播與大型活動廣告
+- 下方商品 Infinite Scroll
+
+## 首頁完成事項
+
+- 主視覺 - 輪播 + 四格廣告
+- 下方商品輪播
+
+## search頁 未完成事項
+
+- Search 頁查詢 Filter
+  - 分類
+  - 品牌
+  - 類型
+  - 其他查詢條件
+- Search 頁排序
+  - 價格高低
+  - 新上市
+  - 月銷量
+- 商品卡片列表
+- 商品分頁
+
+## 可 demo 頁面
+
+首頁： http://localhost:5173/
+
+原目標：
+
+- 首頁 + 商品查詢頁
+
+達成目標：
+
+- 首頁 第一個主視覺區塊
+
+達成率： 1/8
+
+## 專案說明
+
+利用 create vite 開啟專案
+
+npm install
+
+npm run dev
